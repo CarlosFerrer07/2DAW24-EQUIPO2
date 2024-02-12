@@ -18,11 +18,11 @@ label {
 
 .btn {
     background-color: #68360c;
-    color: #C88751;
+    color: #cc8d5a;
 }
 
 .btn:hover {
-    background-color: #C88751;
+    background-color: #cc8d5a;
     color: #68360c;
     border-color: #68360c;
     font-weight: bold;
