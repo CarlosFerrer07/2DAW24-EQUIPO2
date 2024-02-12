@@ -1,0 +1,5 @@
+--Comando para iniciar la página y verla en el navegador--
+ng serve
+
+--Comando para crear comonentes--
+ng generate component components/header
