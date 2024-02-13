@@ -34,3 +34,9 @@
 #opciones .navbar-nav li.active a {
     background-color: #68360c; /* Cambia el color de fondo del elemento activo */
 }
+
+
+#opciones .navbar-nav li a:active {
+    color: #68360c; /* Cambia el color del texto al hacer clic */
+    font-size: 1.2em; /* Ajusta el tamaño de la letra al hacer clic */
+}
