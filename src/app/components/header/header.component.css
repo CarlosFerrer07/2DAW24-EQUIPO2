@@ -1,0 +1,36 @@
+
+.navbar{
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    
+}
+
+.navbar-toggler{
+    background-color: #68360c;
+    border-color: #cc8d5a;
+    color: #cc8d5a;
+}
+
+
+#opciones .navbar-nav li {
+    margin-right: 10px; /* Espaciado entre elementos */
+}
+
+#opciones .navbar-nav li a {
+    background-color: #68360c; /* Fondo marrón */
+    color: #FFF; /* Texto blanco */
+    padding: 10px 15px; /* Ajusta el relleno según sea necesario */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el fondo se aplique correctamente */
+}
+
+#opciones .navbar-nav li a:hover {
+    background-color: #cc8d5a; /* Cambia el color de fondo al pasar el ratón */
+}
+
+#opciones .navbar-nav li.active a {
+    background-color: #68360c; /* Cambia el color de fondo del elemento activo */
+}
