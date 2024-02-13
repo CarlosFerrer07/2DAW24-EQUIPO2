@@ -7,33 +7,40 @@ label {
     color: #68360c;
 }
 
-.form-check label{
+.form-check label {
     color: black;
 }
 
 .form-check-input:checked {
     background-color: #68360c;
     border-color: #68360c;
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6);
 }
 
-.form-control:focus{
+.form-check-input:focus {
     border-color: #68360c;
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    box-shadow: 0 0 0 0.25rem rgba(229, 103, 23,.25);
+    outline: 0 none;
+
+}
+
+.form-control:focus {
+    border-color: #68360c;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6);
     outline: 0 none;
 }
 
 .btn {
     background-color: #68360c;
     color: #cc8d5a;
-    
+
 }
 
 .btn:hover {
     background-color: #cc8d5a;
     color: #68360c;
     border-color: #68360c;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 .btn:focus {
