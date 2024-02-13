@@ -1,10 +1,10 @@
-.card {
+/* .card {
     width: 350px;
     background-color: #fafafa;
     border-radius: 20px;
-    margin: 65px;
+    margin: 20px;
     margin-top: 100px;
-    overflow: hidden;
+
     transition: transform 0.7s ease-in-out;
     color: #6c380d;
 
@@ -25,7 +25,7 @@
   
   .card-body {
     padding: 20px;
-    max-height: 150px; /* Altura máxima inicial */
+    max-height: 150px;
     overflow: hidden;
     transition: max-height 0.5s ease;
     background-color: #fdfdfd;
@@ -42,4 +42,7 @@
     font-size: 1.2em;
     margin-bottom: 60px;
     
-  }
+  } */
+  .card-body{
+    background-color: #68360c;
+}
