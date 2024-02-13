@@ -86,3 +86,10 @@
   border-width: 2px; /* Puedes ajustar el ancho del borde según tus necesidades */
   border-style: solid; /* Asegura que el borde sea de tipo sólido */
 }
+
+.btn:hover{
+  background-color: #68360c;
+  border-color: #ffffff;
+  border-width: 2px; /* Puedes ajustar el ancho del borde según tus necesidades */
+  border-style: solid; /* Asegura que el borde sea de tipo sólido */
+}
