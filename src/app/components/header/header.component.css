@@ -40,3 +40,10 @@
     color: #68360c; /* Cambia el color del texto al hacer clic */
     font-size: 1.2em; /* Ajusta el tamaño de la letra al hacer clic */
 }
+
+#opciones .navbar-nav li.active a {
+    background-color: #cc8d5a; /* Cambia el color de fondo del elemento activo */
+    color: #fff; /* Cambia el color del texto del elemento activo */
+    font-weight: bold; /* Hace que el texto del elemento activo sea más grueso */
+  }
+  
