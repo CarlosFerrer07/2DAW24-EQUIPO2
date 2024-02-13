@@ -45,5 +45,6 @@
     background-color: #cc8d5a; /* Cambia el color de fondo del elemento activo */
     color: #fff; /* Cambia el color del texto del elemento activo */
     font-weight: bold; /* Hace que el texto del elemento activo sea más grueso */
+    font-size: 1.2em;
   }
   
