@@ -1,0 +1,29 @@
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    color: #68360c;
+}
+
+.form-check label{
+    color: black;
+}
+
+.form-check-input:checked {
+    background-color: #68360c;
+    border-color: #68360c;
+}
+
+.btn {
+    background-color: #68360c;
+    color: #cc8d5a;
+}
+
+.btn:hover {
+    background-color: #cc8d5a;
+    color: #68360c;
+    border-color: #68360c;
+    font-weight: bold;
+}
