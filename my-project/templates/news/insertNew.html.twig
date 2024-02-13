@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+                    <div id="form_container">
+                        <form method="post" action="">
+                            <div>
+                                <h2>Insertar Noticia</h2>
+                            </div>
+
+                            <label for="title">Título</label>
+                            <div>
+                                <input name="title" type="text" maxlength="45" size="45" value="" />
+                            </div>
+
+                            <label for="date">fecha Noticia</label>
+                            <div>
+                                <input name="date" type="date" value="" />
+                            </div>
+
+                            <label for="image">Imagen</label>
+                            <div>
+                                <input name="image" type="text" maxlength="45" size="45" value="" />
+                            </div>
+
+                            <label for="source">Fuente</label>
+                            <div>
+                                <input name="source" type="text" maxlength="45" size="45" value="" />
+                            </div>
+
+                            <label for="description">Descripción</label>
+                            <div>
+                                <textarea name="description" cols="50" rows="5"></textarea>
+                            </div>
+
+                            <input type="submit" name="submit" value="Insertar" />
+                        </form>
+                        <br>
+                        <a href="{{ path('app_news') }}">VOLVER</a>
+
+                    </div>
+
+
+{% endblock %}

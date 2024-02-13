@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+                    <table border='1px solid'>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>{{ new.getTitle() }}</td>
+                                    <td>{{ new.getDescription() }}</td>
+                                </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+
+                    <a href="{{ path('app_news') }}">VOLVER</a>
+                </div>
+
+
+{% endblock %}
