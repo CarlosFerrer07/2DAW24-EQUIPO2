@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\NoticiasRepository;
 use App\Entity\Noticias;
+use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CrudController extends AbstractController
 {
@@ -42,6 +44,27 @@ class CrudController extends AbstractController
             'news' => $news,
             'page' => $page
         ]);
+    }
+
+    #[Route('/newsJson', name: 'news_json', methods:['get'])]
+    public function getNewsJson(ManagerRegistry $doctrine):JsonResponse
+    {
+        $news = $doctrine->getRepository(Noticias::class)->findAll();
+
+        $data = [];
+
+        foreach ($news as $new) {
+            $data[] = [
+                'id' => $new->getId(),
+                'title' => $new->getTitle(),
+                'start_date'=> $new->getStartDate(),
+                'description'=>$new->getDescription(),
+                'image' => $new->getImage(),
+                'source' => $new->getSource()
+            ];
+        }
+
+        return $this->json($data);
     }
 
     #[Route('/detailNew/{id}', name: 'detail_new')]
