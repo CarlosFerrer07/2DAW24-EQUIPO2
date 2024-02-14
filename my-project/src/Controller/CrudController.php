@@ -67,6 +67,27 @@ class CrudController extends AbstractController
         return $this->json($data);
     }
 
+    #[Route('/newsJson/{id}', name: 'news_json', methods:['get'])]
+    public function getNewsJsonById(ManagerRegistry $doctrine, int $id):JsonResponse
+    {
+        $new = $doctrine->getRepository(Noticias::class)->find($id);
+
+        if (!$new) {
+            return $this->json('No new found for id ' . $id, 404);
+        }
+
+        $data = [
+            'id' => $new->getId(),
+            'title' => $new->getTitle(),
+            'start_date'=> $new->getStartDate(),
+            'description'=>$new->getDescription(),
+            'image' => $new->getImage(),
+            'source' => $new->getSource()
+        ];
+
+        return $this->json($data);
+    }
+
     #[Route('/detailNew/{id}', name: 'detail_new')]
     public function detailNew(int $id): Response
     {
