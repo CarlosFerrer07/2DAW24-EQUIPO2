@@ -28,13 +28,13 @@
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="dni" class="form-label">DNI</label>
-                      <input type="text" class="form-control" id="dni" name="dni" placeholder="12345678A" required>
+                      <input type="text" class="form-control" id="dni" name="dni" pattern="\d{8}[A-Za-z]" placeholder="12345678A" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="pasaporte" class="form-label">Pasaporte</label>
-                      <input type="text" class="form-control" id="pasaporte" name="pasaporte" placeholder="ABC123456" required>
+                      <input type="text" class="form-control" id="pasaporte" name="pasaporte" pattern="[A-Za-z]{3}\d{6}" placeholder="ABC123456" required>
                     </div>
                 </div>
             </div>
@@ -42,13 +42,13 @@
                 <div class="col-sm-4">
                     <div class="mb-3">
                         <label for="mail" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="mail" name="mail" placeholder="example@example.es" required>
+                        <input type="email" class="form-control" id="mail" name="mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese una dirección de correo electrónico válida" placeholder="example@example.es" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="telf" class="form-label">Teléfono</label>
-                      <input type="tel" class="form-control" id="telf" name="telf" placeholder="698 745 321" required>
+                      <input type="tel" class="form-control" id="telf" name="telf" pattern="\d{9}" placeholder="698 745 321" required>
                     </div>
                 </div>
             </div>
