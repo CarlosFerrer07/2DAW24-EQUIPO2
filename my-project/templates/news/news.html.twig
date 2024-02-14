@@ -2,7 +2,7 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-
+<div class="container">
                     <h1>LISTADO DE NOTICIAS</h1>
 
                     <br>
@@ -11,7 +11,8 @@
 
                     <br>
 
-                    <table border='1px solid'>
+                    <div class="row justify-content-center">
+                        <table border='1px solid'>
                         {# Cálculo de valores para la paginación #}
                         {% set elementsPerPage = 10 %}
                         {# Si la variable 'page' no está definida o es nula, establecerla en 1 #}
@@ -49,32 +50,39 @@
                         </tbody>
                     </table>
 
-                    <br>
+                    </div>
 
+                    <div class="row justify-content-center mt-3">
                     {# Navegador #}
                     {% set totalPages = (((news|length)/elementsPerPage)|round(0, 'ceil')) %}
-                    {% if page > 1 %}
-                    <a href="{{ path('app_clients', {'page': 1}) }}">&lt;&lt;</a>
-                    <a href="{{ path('app_clients', {'page': page - 1}) }}">&lt;</a>
-                    {% else %}
-                    <span>&lt;&lt;</span>
-                    <span>&lt;</span>
-                    {% endif %}
-                    {% for pageButton in 1..totalPages %}
-                    {% if pageButton == page %}
-                    <span>{{ pageButton }}</span>
-                    {% else %}
-                    <a href="{{ path('app_news', {'page': pageButton}) }}">{{ pageButton }}</a>
-                    {% endif %}
-                    {% endfor %}
-                    {% if page < totalPages %} <a href="{{ path('app_news', {'page': page + 1}) }}">&gt;</a>
-                        <a href="{{ path('app_news', {'page': totalPages}) }}">&gt;&gt;</a>
-                        {% else %}
-                        <span>&gt;</span>
-                        <span>&gt;&gt;</span>
-                        {% endif %}
+                        <div class="pagination">
+                            {% if page > 1 %}
+                            <a href="{{ path('app_news', {'page': 1}) }}">&lt;&lt;</a>
+                            <a href="{{ path('app_news', {'page': page - 1}) }}">&lt;</a>
+                            {% else %}
+                            <span>&lt;&lt;</span>
+                            <span>&lt;</span>
+                            {% endif %}
+                            {% for pageButton in 1..totalPages %}
+                            {% if pageButton == page %}
+                            <span>{{ pageButton }}</span>
+                            {% else %}
+                            <a href="{{ path('app_news', {'page': pageButton}) }}">{{ pageButton }}</a>
+                            {% endif %}
+                            {% endfor %}
+                            {% if page < totalPages %}
+                            <a href="{{ path('app_news', {'page': page + 1}) }}">&gt;</a>
+                            <a href="{{ path('app_news', {'page': totalPages}) }}">&gt;&gt;</a>
+                            {% else %}
+                            <span>&gt;</span>
+                            <span>&gt;&gt;</span>
+                            {% endif %}
+                        </div>
+                    </div>
+</div>
 
-                </div>
+
+
 
  
 {% endblock %}
