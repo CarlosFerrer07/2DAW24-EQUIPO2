@@ -14,6 +14,8 @@ export class CardComponent {
 
   @Input() description: string | undefined;
 
+  @Input() id: number | undefined;
+
 
 
 }
