@@ -1,4 +1,5 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
+import { DataNews } from '../../../../interfaces/news.interface';
 
 @Component({
   selector: 'app-card',
@@ -9,8 +10,7 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
 })
 export class CardComponent {
 
-
-
+  @Input() nameNew: string | undefined;
 
 
 

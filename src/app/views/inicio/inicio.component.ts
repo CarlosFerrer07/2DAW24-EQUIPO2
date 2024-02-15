@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { JumbotronComponent } from '../../components/Jumbotron/jumbotron/jumbotron.component';
 import { CardComponent } from '../../components/Card/card/card.component';
+import { RequestService } from '../../services/request.service';
+import { DataNews } from '../../../interfaces/news.interface';
 
 @Component({
   selector: 'app-inicio',
@@ -10,7 +12,20 @@ import { CardComponent } from '../../components/Card/card/card.component';
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
-images= ["https://pxbar.com/wp-content/uploads/2023/09/goofy-ahh-pictures-14.jpg","https://pxbar.com/wp-content/uploads/2023/09/goofy-ahh-pictures-15.jpg","https://pxbar.com/wp-content/uploads/2023/09/wallpaper-goofy-ahh-pictures.jpg"]
-Title= ["RAHHH","aASDSGFHF","CXZVBVN"]
-Text= ["","",""]
+
+  public constructor(public service: RequestService) {}
+
+  public newsArray:DataNews[] | undefined;
+
+
+  ngOnInit() {
+    this.getAllNews();
+  }
+
+  public getAllNews() {
+    this.service.getNews().subscribe((news) => {
+      this.newsArray = news;
+      console.log(this.newsArray);
+    })
+  }
 }
