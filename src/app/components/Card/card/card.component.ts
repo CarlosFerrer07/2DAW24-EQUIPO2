@@ -12,6 +12,8 @@ export class CardComponent {
 
   @Input() nameNew: string | undefined;
 
+  @Input() description: string | undefined;
+
 
 
 }
