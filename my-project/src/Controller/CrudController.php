@@ -46,7 +46,7 @@ class CrudController extends AbstractController
         ]);
     }
 
-    #[Route('/newsJson', name: 'news_json', methods:['get'])]
+    #[Route('/newsJson', name: 'todas_json', methods:['get'])]
     public function getNewsJson(ManagerRegistry $doctrine):JsonResponse
     {
         $news = $doctrine->getRepository(Noticias::class)->findAll();
