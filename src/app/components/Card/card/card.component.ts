@@ -18,6 +18,8 @@ export class CardComponent {
 
   @Input() date: Date | undefined;
 
+  @Input() image: string | undefined;
+
   formattedDate: string | undefined;
 
   ngOnInit() {
