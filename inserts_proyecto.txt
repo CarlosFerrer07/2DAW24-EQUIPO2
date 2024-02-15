@@ -1,0 +1,7 @@
+INSERT INTO noticias VALUES (1 ,'El hambre en África', '1980-12-17','El hombre y la tierra', 'IMG_20230801_103011.jpg','fuente propia');
+
+INSERT INTO noticias VALUES (2, 'Ugali', '1980-12-17', 'El ugali es un plato tradicional africano muy popular en países como Kenia, Tanzania y Uganda. Se elabora principalmente con harina de maíz o mandioca, 
+cocida con agua hasta obtener una consistencia similar a la masa de pan.', 'ugali.jpg', 'fuente propia');
+
+INSERT INTO noticias VALUES (3, 'Hiena e hipopotamo', '2024-02-14', 'Una hiena escapó por poco de ser devorada por un hipopótamo, tras creer esta que el animal estaba muerto. El guía de safari Carlos Ismail estaba dirigiendo un recorrido 
+por el cráter del Ngorongoro, Tanzania, cuando vio a la carroñera oportunista vadeando un poco de agua', 'hipopotamo.jpg', '20 minutos');
