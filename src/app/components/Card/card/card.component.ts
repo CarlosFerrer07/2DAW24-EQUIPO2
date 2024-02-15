@@ -1,5 +1,5 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
-import { DataNews } from '../../../../interfaces/news.interface';
+import { DataNews } from '../../interfaces/news.interface';
 
 @Component({
   selector: 'app-card',
@@ -16,6 +16,15 @@ export class CardComponent {
 
   @Input() id: number | undefined;
 
+  @Input() date: Date | undefined;
 
+  formattedDate: string | undefined;
+
+  ngOnInit() {
+    if (this.date) {
+      const dateObj = new Date(this.date);
+      this.formattedDate = dateObj.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    }
+  }
 
 }

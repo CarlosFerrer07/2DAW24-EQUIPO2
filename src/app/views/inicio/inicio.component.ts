@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { JumbotronComponent } from '../../components/Jumbotron/jumbotron/jumbotron.component';
 import { CardComponent } from '../../components/Card/card/card.component';
 import { RequestService } from '../../services/request.service';
-import { DataNews } from '../../../interfaces/news.interface';
+import { DataNews } from '../../components/interfaces/news.interface';
 
 @Component({
   selector: 'app-inicio',

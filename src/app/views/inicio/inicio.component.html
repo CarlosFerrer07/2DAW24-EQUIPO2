@@ -8,7 +8,7 @@
         
     @for (news of newsArray; track $index) {
         <article class="col-xl-4 col-md-4 col-sm-4 mb-4">
-        <app-card [nameNew]="news.title" [description]="news.description" [id]="news.id"></app-card>
+        <app-card [nameNew]="news.title" [description]="news.description" [id]="news.id" [date]="news.start_date.date"></app-card>
         </article>
     }
 
