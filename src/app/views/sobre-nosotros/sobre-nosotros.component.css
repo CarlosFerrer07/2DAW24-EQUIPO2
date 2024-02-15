@@ -2,3 +2,10 @@ img{
     height: 400px;
     width: 100%;
 }
+
+hr {
+    border: 1px solid #68360c; /* Cambia el grosor de la línea según sea necesario */
+    height: 6px; /* Ajusta la altura de la línea según sea necesario */
+    background-color: #68360c; /* Puedes agregar este estilo si deseas un fondo de color */
+}
+
