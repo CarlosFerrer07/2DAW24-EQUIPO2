@@ -30,6 +30,20 @@ label {
     outline: 0 none;
 }
 
+.form-control:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s; /* Añade una transición larga */
+}
+
+.form-control:-webkit-autofill:focus {
+    border-color: #68360c;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6);
+    outline: 0 none;
+    background-color: white
+}
+
+
+
 .btn {
     background-color: #68360c;
     color: #cc8d5a;

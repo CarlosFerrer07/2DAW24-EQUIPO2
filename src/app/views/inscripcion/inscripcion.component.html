@@ -14,13 +14,13 @@
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="nombre" class="form-label">Nombre</label>
-                      <input type="nombre" class="form-control" id="nombre" name="nombre" placeholder="">
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="apellidos" class="form-label">Apellidos</label>
-                      <input type="apellidos" class="form-control" id="apellidos" name="apellidos" placeholder="">
+                      <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -28,13 +28,13 @@
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="dni" class="form-label">DNI</label>
-                      <input type="dni" class="form-control" id="dni" name="dni" placeholder="12345678A">
+                      <input type="text" class="form-control" id="dni" name="dni" pattern="\d{8}[A-Za-z]" placeholder="12345678A" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="pasaporte" class="form-label">Pasaporte</label>
-                      <input type="pasaporte" class="form-control" id="pasaporte" name="pasaporte" placeholder="ABC123456">
+                      <input type="text" class="form-control" id="pasaporte" name="pasaporte" pattern="[A-Za-z]{3}\d{6}" placeholder="ABC123456" required>
                     </div>
                 </div>
             </div>
@@ -42,13 +42,13 @@
                 <div class="col-sm-4">
                     <div class="mb-3">
                         <label for="mail" class="form-label">Correo electrónico</label>
-                        <input type="text" class="form-control" id="mail" name="mail" placeholder="example@example.es">
+                        <input type="email" class="form-control" id="mail" name="mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese una dirección de correo electrónico válida" placeholder="example@example.es" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="mb-3">
                       <label for="telf" class="form-label">Teléfono</label>
-                      <input type="telf" class="form-control" id="telf" name="telf" placeholder="698 745 321">
+                      <input type="tel" class="form-control" id="telf" name="telf" pattern="\d{9}" placeholder="698 745 321" required>
                     </div>
                 </div>
             </div>
@@ -66,13 +66,13 @@
                 <div class="col-sm-8">
                     <div class="mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                             <label class="form-check-label" for="flexCheckDefault">
                               Mayor de 18 años
                             </label>
                         </div>
                         <div class="mt-3">
-                            <button type="button" class="btn">Enviar</button>
+                            <button type="submit" class="btn">Enviar</button>
                         </div>
                     </div>
                 </div>
