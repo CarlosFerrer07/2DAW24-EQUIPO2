@@ -11,3 +11,18 @@ img{
 p {
     text-align: justify;
 }
+
+
+.boton {
+    background-image: url("../../../assets/image/flechaAbajo.png");
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Agrega una transición para suavizar el efecto */
+  }
+  
+  .boton:hover {
+    transform: scale(1.2); /* Escala el botón al 120% cuando el cursor está sobre él */
+  }

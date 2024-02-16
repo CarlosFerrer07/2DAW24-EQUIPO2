@@ -1,15 +1,31 @@
 <!-- Cards -->
 
-  <div id="card1" class="card text-center bg-primary text-dark ">
-    <img (click)="onShowModal()" src="../../../../assets/image/{{image}}" class="card-img-top" height="250"
-      alt="Imagen Noticia1" />
-    <div class="card-body">
-      <h4 class="card-title text-white">{{nameNew}}</h4>
-      <p class="card-text text-white">{{formattedDate}}</p>
-      <p class="card-text text-white collapse" id="{{id}}" style="overflow: hidden">
-        {{description}}
-      </p>
-      <a href="#{{id}}" class="btn btn-dark" data-bs-toggle="collapse" role="button" aria-expanded="false"
-        aria-controls="Noticia1">Ver Más</a>
-    </div>
+<div id="card1" class="card text-center bg-primary text-dark">
+  <img
+    (click)="onShowModal()"
+    src="../../../../assets/image/{{ image }}"
+    class="card-img-top"
+    height="250"
+    alt="Imagen Noticia1"
+  />
+  <div class="card-body">
+    <h4 class="card-title text-white">{{ nameNew }}</h4>
+    <p class="card-text text-white">{{ formattedDate }}</p>
+    <p
+      class="card-text text-white collapse"
+      id="{{ id }}"
+      style="overflow: hidden"
+    >
+      {{ description }}
+    </p>
+    <a
+      href="#{{ id }}"
+      class="btn btn-dark"
+      data-bs-toggle="collapse"
+      role="button"
+      aria-expanded="false"
+      aria-controls="Noticia1"
+      >Ver Más</a
+    >
   </div>
+</div>
