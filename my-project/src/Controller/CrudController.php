@@ -10,6 +10,7 @@ use App\Repository\NoticiasRepository;
 use App\Entity\Noticias;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class CrudController extends AbstractController
 {
@@ -23,9 +24,16 @@ class CrudController extends AbstractController
         $this->newsRepository = $news;
     }
 
+    #[Route('/', name: 'app_init0')]
+    public function init(): RedirectResponse
+    {
+        return $this->redirectToRoute('app_login');
+       
+    }
 
-    #[Route('/', name: 'app_init')]
-    public function init(): response
+
+    #[Route('/admin', name: 'app_init')]
+    public function initA(): response
     {
         $welcome = 'PANEL DE CONTROL';
 
