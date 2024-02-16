@@ -29,8 +29,4 @@ export class CardComponent {
     }
   }
 
-  onShowModal() {
-    alert('Aqui va el modal');
-  }
-
 }
