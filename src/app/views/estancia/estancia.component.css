@@ -1,5 +1,5 @@
 iframe{
-    height: auto;
+    height: 300px;
     width: 100%
 }
 
@@ -26,3 +26,4 @@ p {
   .boton:hover {
     transform: scale(1.2); /* Escala el botón al 120% cuando el cursor está sobre él */
   }
+  
