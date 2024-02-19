@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { DataNews } from '../../interfaces/news.interface';
+import { DataNews } from '../components/interfaces/news.interface';
 
 
 @Injectable({
