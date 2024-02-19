@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,16 +28,16 @@ class CrudController extends AbstractController
     }
 
     #[Route('/', name: 'app_init0')]
-    public function init(): RedirectResponse
+    public function init(): Response
     {
         $token = $this->tokenStorage->getToken();
 
-        if (null !== $token){
+
+        if (null !== $token) {
             return $this->redirectToRoute('app_init');
         } else {
             return $this->redirectToRoute('app_login');
         }
-       
     }
 
 
@@ -62,8 +63,8 @@ class CrudController extends AbstractController
         ]);
     }
 
-    #[Route('/newsJson', name: 'todas_json', methods:['get'])]
-    public function getNewsJson(ManagerRegistry $doctrine):JsonResponse
+    #[Route('/newsJson', name: 'todas_json', methods: ['get'])]
+    public function getNewsJson(ManagerRegistry $doctrine): JsonResponse
     {
         $news = $doctrine->getRepository(Noticias::class)->findAll();
 
@@ -73,8 +74,8 @@ class CrudController extends AbstractController
             $data[] = [
                 'id' => $new->getId(),
                 'title' => $new->getTitle(),
-                'start_date'=> $new->getStartDate(),
-                'description'=>$new->getDescription(),
+                'start_date' => $new->getStartDate(),
+                'description' => $new->getDescription(),
                 'image' => $new->getImage(),
                 'source' => $new->getSource()
             ];
@@ -83,8 +84,8 @@ class CrudController extends AbstractController
         return $this->json($data);
     }
 
-    #[Route('/newsJson/{id}', name: 'news_json', methods:['get'])]
-    public function getNewsJsonById(ManagerRegistry $doctrine, int $id):JsonResponse
+    #[Route('/newsJson/{id}', name: 'news_json', methods: ['get'])]
+    public function getNewsJsonById(ManagerRegistry $doctrine, int $id): JsonResponse
     {
         $new = $doctrine->getRepository(Noticias::class)->find($id);
 
@@ -95,8 +96,8 @@ class CrudController extends AbstractController
         $data = [
             'id' => $new->getId(),
             'title' => $new->getTitle(),
-            'start_date'=> $new->getStartDate(),
-            'description'=>$new->getDescription(),
+            'start_date' => $new->getStartDate(),
+            'description' => $new->getDescription(),
             'image' => $new->getImage(),
             'source' => $new->getSource()
         ];
@@ -164,5 +165,11 @@ class CrudController extends AbstractController
     public function angular(): RedirectResponse
     {
         return new RedirectResponse('http://localhost:4200');
+    }
+
+    #[Route('/accesDenied', name: 'app_denied')]
+    public function denied(): Response
+    {
+        return $this->render('error/accesDenied.html.twig', []);
     }
 }
