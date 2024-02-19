@@ -11,23 +11,31 @@ use App\Entity\Noticias;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class CrudController extends AbstractController
 {
     private $em;
     private $newsRepository;
+    private $tokenStorage;
 
-
-    public function __construct(EntityManagerInterface $em, NoticiasRepository $news)
+    public function __construct(EntityManagerInterface $em, NoticiasRepository $news, TokenStorageInterface $tokenStorage)
     {
         $this->em = $em;
         $this->newsRepository = $news;
+        $this->tokenStorage = $tokenStorage;
     }
 
     #[Route('/', name: 'app_init0')]
     public function init(): RedirectResponse
     {
-        return $this->redirectToRoute('app_login');
+        $token = $this->tokenStorage->getToken();
+
+        if (null !== $token){
+            return $this->redirectToRoute('app_init');
+        } else {
+            return $this->redirectToRoute('app_login');
+        }
        
     }
 
@@ -150,5 +158,11 @@ class CrudController extends AbstractController
 
         //redirigimos a ruta una vez borrado
         return $this->redirectToRoute('app_news');
+    }
+
+    #[Route('/angular', name: 'app_angular')]
+    public function angular(): RedirectResponse
+    {
+        return new RedirectResponse('http://localhost:4200');
     }
 }
