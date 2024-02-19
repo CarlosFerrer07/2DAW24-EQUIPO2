@@ -14,5 +14,7 @@ export class RequestService {
   public getNews():Observable<DataNews[]>{
     return this.http.get<DataNews[]>('http://localhost:8000/newsJson');
     }
+  
+  
     
 }
