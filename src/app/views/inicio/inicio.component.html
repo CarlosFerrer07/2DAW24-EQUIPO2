@@ -1,16 +1,15 @@
 <app-jumbotron></app-jumbotron>
 <section>
-    
+
     <br /><br><br><br>
     <h2 class="text-center">NOTICIAS</h2>
-    
-    <div class="row">
-        
-    @for (news of newsArray; track $index) {
-        <article class="col-xl-4 col-md-4 col-sm-4 mb-4">
-        <app-card [nameNew]="news.title" [description]="news.description" [id]="news.id" [date]="news.start_date.date" [image]="news.image"></app-card>
-        </article>
-    }
 
+    <div class="row">
+        @for (news of newsArray; track $index) {
+        <article class="col-xl-4 col-md-4 col-sm-4 mb-4">
+            <app-card [nameNew]="news.title" [description]="news.description" [id]="news.id"
+                [date]="news.start_date.date" [image]="news.image"></app-card>
+        </article>
+        }
     </div>
 </section>
