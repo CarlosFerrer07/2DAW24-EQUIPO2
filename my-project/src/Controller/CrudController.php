@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\NoticiasRepository;
 use App\Entity\Noticias;
+use App\Entity\Volunteer;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -174,7 +175,7 @@ class CrudController extends AbstractController
     }
 
     #[Route('/procesarFormulario', name: 'app_form')]
-    public function processForm(Request $request): Response
+    public function processForm(Request $request, ManagerRegistry $doctrine): Response
     {
 
         // Obtener los datos del formulario enviados a través de la solicitud POST
@@ -187,7 +188,7 @@ class CrudController extends AbstractController
         $comentarios = $request->request->get('comentarios');
 
         // Guardar los datos en un array asociativo
-        $datosFormulario = [
+        /* $datosFormulario = [
             'Nombre' => $nombre,
             'Apellidos' => $apellidos,
             'DNI' => $dni,
@@ -195,10 +196,23 @@ class CrudController extends AbstractController
             'Email' => $email,
             'Teléfono' => $tel,
             'Comentarios' => $comentarios
-        ];
+        ]; */
+
+        $entityManager = $doctrine->getManager();
+   
+        $volunteer = new Volunteer();
+        $volunteer->setNombre($nombre);
+        $volunteer->setApellidos($apellidos);
+        $volunteer->setDni($dni);
+        $volunteer->setPasaporte($pasaporte);
+        $volunteer->setEmail($email);
+        $volunteer->setTelefono(intval($tel));
+        $volunteer->setComentario($comentarios);
+        $entityManager->persist($volunteer);
+        $entityManager->flush();
 
         // Mostrar los datos con var_dump()
-        var_dump($datosFormulario);
+        /* var_dump($datosFormulario); */
 
 
         // También puedes devolver una respuesta para confirmar que los datos han sido recibidos
