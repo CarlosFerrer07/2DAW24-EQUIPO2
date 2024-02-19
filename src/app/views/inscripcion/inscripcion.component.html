@@ -54,6 +54,8 @@
                 name="dni"
                 pattern="\d{8}[A-Za-z]"
                 placeholder="12345678A"
+                oninput="this.value = this.value.replace(g, '')"
+                maxlength="9"
                 required
               />
             </div>
@@ -68,6 +70,7 @@
                 name="pasaporte"
                 pattern="[A-Za-z]{3}\d{6}"
                 placeholder="ABC123456"
+                maxlength="9"
                 required
               />
             </div>
@@ -97,8 +100,10 @@
                 class="form-control"
                 id="telf"
                 name="telf"
-                pattern="\d{9}"
+                pattern="[0-9]{9}"
                 placeholder="698 745 321"
+                oninput="this.value = this.value.replace(/\D/g, '').substring(0, 9)"
+                maxlength="9"
                 required
               />
             </div>
