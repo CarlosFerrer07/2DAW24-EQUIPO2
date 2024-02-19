@@ -29,3 +29,4 @@ final class Version20240219075729 extends AbstractMigration
         $this->addSql('DROP TABLE volunteer');
     }
 }
+
