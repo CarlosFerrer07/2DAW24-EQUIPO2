@@ -14,12 +14,12 @@
   </head>
   <body>
     <section class="container">
-      <form>
+      <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
         <div class="row justify-content-center">
           <div class="col-sm-4">
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
-              <input
+              <input formControlName="nombre"
                 type="text"
                 class="form-control"
                 id="nombre"
@@ -31,8 +31,8 @@
           </div>
           <div class="col-sm-4">
             <div class="mb-3">
-              <label for="apellidos" class="form-label">Apellidos</label>
-              <input
+              <label for="apellidos" class="form-label" >Apellidos</label>
+              <input formControlName="apellidos"
                 type="text"
                 class="form-control"
                 id="apellidos"
@@ -47,7 +47,7 @@
           <div class="col-sm-4">
             <div class="mb-3">
               <label for="dni" class="form-label">DNI</label>
-              <input
+              <input formControlName="dni"
                 type="text"
                 class="form-control"
                 id="dni"
@@ -61,7 +61,7 @@
           <div class="col-sm-4">
             <div class="mb-3">
               <label for="pasaporte" class="form-label">Pasaporte</label>
-              <input
+              <input formControlName="pasaporte"
                 type="text"
                 class="form-control"
                 id="pasaporte"
@@ -77,7 +77,7 @@
           <div class="col-sm-4">
             <div class="mb-3">
               <label for="mail" class="form-label">Correo electrónico</label>
-              <input
+              <input formControlName="email"
                 type="email"
                 class="form-control"
                 id="mail"
@@ -92,7 +92,7 @@
           <div class="col-sm-4">
             <div class="mb-3">
               <label for="telf" class="form-label">Teléfono</label>
-              <input
+              <input formControlName="tel"
                 type="tel"
                 class="form-control"
                 id="telf"
@@ -109,7 +109,7 @@
             <div class="mb-3">
               <div class="form-group">
                 <label for="comentarios">Déjanos tu comentario:</label>
-                <textarea
+                <textarea formControlName="comentario"
                   class="form-control"
                   rows="4"
                   id="comentarios"
