@@ -172,4 +172,36 @@ class CrudController extends AbstractController
     {
         return $this->render('error/accesDenied.html.twig', []);
     }
+
+    #[Route('/procesarFormulario', name: 'app_form')]
+    public function processForm(Request $request): Response
+    {
+
+        // Obtener los datos del formulario enviados a través de la solicitud POST
+        $nombre = $request->request->get('nombre');
+        $apellidos = $request->request->get('apellidos');
+        $dni = $request->request->get('dni');
+        $pasaporte = $request->request->get('pasaporte');
+        $email = $request->request->get('mail');
+        $tel = $request->request->get('telf');
+        $comentarios = $request->request->get('comentarios');
+
+        // Guardar los datos en un array asociativo
+        $datosFormulario = [
+            'Nombre' => $nombre,
+            'Apellidos' => $apellidos,
+            'DNI' => $dni,
+            'Pasaporte' => $pasaporte,
+            'Email' => $email,
+            'Teléfono' => $tel,
+            'Comentarios' => $comentarios
+        ];
+
+        // Mostrar los datos con var_dump()
+        var_dump($datosFormulario);
+
+
+        // También puedes devolver una respuesta para confirmar que los datos han sido recibidos
+        return new Response('Datos del formulario recibidos correctamente');
+    }
 }
