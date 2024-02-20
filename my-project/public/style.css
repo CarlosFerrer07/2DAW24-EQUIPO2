@@ -1,0 +1,35 @@
+body {
+    margin: 10px !important;
+    color: #68360c !important;
+}
+
+button {
+    margin-top: 10px !important;
+}
+
+.form-control:focus{
+    border-color: #68360c !important;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6) !important;
+    outline: 0 none !important;
+}
+
+.btn {
+    border-color:#cc8d5a !important;
+    background-color: #68360c !important;
+    color: #cc8d5a !important;
+}
+
+.btn:hover{
+    background-color: #cc8d5a !important;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6) !important;
+    outline: 0 none !important;
+    color: #68360c !important;
+    border-color: #68360c !important;
+    font-weight: bold !important;
+}
+
+.btn:focus{
+    border-color: #68360c !important;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6) !important;
+    outline: 0 none !important;
+} 
