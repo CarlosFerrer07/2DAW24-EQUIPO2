@@ -11,8 +11,8 @@
 
                     <br>
 
-                    <div class="row justify-content-center">
-                        <table border='1px solid'>
+                    <div class="row justify-content-center" >
+                        <table>
                         {# Cálculo de valores para la paginación #}
                         {% set elementsPerPage = 10 %}
                         {# Si la variable 'page' no está definida o es nula, establecerla en 1 #}
@@ -80,6 +80,8 @@
                         </div>
                     </div>
 </div>
+
+                    <a href="{{ path('app_init') }}"><img width='50px' src="{{asset('images/return.png')}}"/></a>
 
 
 
