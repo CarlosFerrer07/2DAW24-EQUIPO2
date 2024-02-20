@@ -33,3 +33,72 @@ button {
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6) !important;
     outline: 0 none !important;
 } 
+
+/* INICIO PANEL DE CONTROL */
+
+section.contentPanel {
+    width: 100%; /* O ajusta el ancho según tus necesidades */
+    display: flex;
+    justify-content: center;
+}
+
+.welcome h1 {
+    margin-top: 10px;
+}
+
+article.welcome {
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255, 144, 0, 0.6) !important;;
+    width: 500px;
+    text-align: center;
+    margin-top: 250px;
+    background-color: aliceblue !important;
+    border-radius: 50px;
+
+}
+
+article.welcome button.btn {
+    margin-top: 30px !important;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #cc8d5a;
+}
+
+.btn a:hover {
+    color: #68360c;
+
+}
+
+div.iconPanel a img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50px;
+}
+
+div.iconPanel a img:hover {
+    width: 60px;
+}
+
+td, th {
+    border: 2px solid #cc8d5a !important;
+}
+td, th{
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+table{
+    margin-top: 10px !important;
+    border: 3px solid #cc8d5a;
+}
+
+#form_container{
+    width: 100%; /* O ajusta el ancho según tus necesidades */
+    display: flex;
+    justify-content: center;
+}
+
+input.btn{
+    margin-top: 10px;
+}

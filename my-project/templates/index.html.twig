@@ -1,13 +1,20 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+            <section class='contentPanel'>
+                <article class='welcome'>
+                    <h1>{{ welcome }}</h1>
 
+                    <button class='btn'><a href="{{ path('app_news') }}">ACCEDER</a></button>
 
-                <h1>{{ welcome }}</h1>
+                    <div class="iconPanel">
+                     <a href="http://localhost:4200/inicio"><img src="{{asset('images/return.png')}}"/></a>
+                    <a href="{{ path('app_logout') }}"><img src="{{asset('images/off.png')}}"/></a>                   
+                    </div>
 
-                <p><a href="{{ path('app_news') }}">ACCEDER A NOTICIAS</a></p>
-                <p><a href="http://localhost:4200/inicio">Volver a Inicio</a></p>
-                <p><a href="{{ path('app_logout') }}">Cerrar sesión</a></p>
+                </article>
+            </section>
+
 
 {% endblock %}
 
