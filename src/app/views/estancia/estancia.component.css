@@ -12,6 +12,12 @@ p {
     text-align: justify;
 }
 
+.imagen{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .boton {
     background-image: url("../../../assets/image/flechaAbajo.png");
