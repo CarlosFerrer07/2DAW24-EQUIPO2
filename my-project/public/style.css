@@ -102,3 +102,8 @@ table{
 input.btn{
     margin-top: 10px;
 }
+
+.iliaTopuria {
+    margin-top: -35px;
+    text-align: right !important;
+}
