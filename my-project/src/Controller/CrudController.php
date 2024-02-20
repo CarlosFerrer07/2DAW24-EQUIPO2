@@ -169,7 +169,7 @@ class CrudController extends AbstractController
     }
 
     #[Route('/accesDenied', name: 'app_denied')]
-    public function denied(): Response
+    public function denied(): RedirectResponse
     {
         return $this->render('error/accesDenied.html.twig', []);
     }
@@ -216,6 +216,6 @@ class CrudController extends AbstractController
 
 
         // También puedes devolver una respuesta para confirmar que los datos han sido recibidos
-        return new Response('Datos del formulario recibidos correctamente');
+        return new RedirectResponse('http://localhost:4200/inscripcion');
     }
 }
