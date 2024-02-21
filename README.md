@@ -54,6 +54,7 @@ Symfony 6.3.12 ![Symfony](https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thum
 
 - ### DataBase: 
  Mysql ![Mysql](https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1488036310/olp7xvw7saxvs88gbdgq.png)
+ 
 - ### Others: 
   Composer 2.7.1 2024 (packet/library manager like npm from Angular)![Composer](https://upload.wikimedia.org/wikipedia/commons/2/26/Logo-composer-transparent.png)
 
