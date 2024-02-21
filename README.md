@@ -44,12 +44,16 @@ this is the part of the project that explains all about the people of the zone, 
 
  CSS![ CSS](https://cdn.iconscout.com/icon/free/png-256/free-css-131-722685.png?f=webp)
 
+ 
  Bootstrap 5.3.2![Bootstrap](https://cdn-icons-png.flaticon.com/256/5968/5968667.png)
+
 
  Angular CLI: 17.0.5 (Con versión Node :20.11.1 y npm 10.2.4)![Angular](https://static-00.iconduck.com/assets.00/angular-icon-256x256-czsu2dhq.png)
  
 - ### Backend:
  PHP 8.2 ![PHP](https://cdn-icons-png.flaticon.com/256/5968/5968332.png)
+
+ 
 Symfony 6.3.12 ![Symfony](https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032013/symfony_black_01.png?itok=mh6RAYNa)
 
 - ### DataBase: 
@@ -57,6 +61,7 @@ Symfony 6.3.12 ![Symfony](https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thum
  
 - ### Others: 
   Composer 2.7.1 2024 (packet/library manager like npm from Angular)![Composer](https://upload.wikimedia.org/wikipedia/commons/2/26/Logo-composer-transparent.png)
+
 
   Docker ![Docker](https://static-00.iconduck.com/assets.00/docker-icon-256x256-civ8fayy.png)
 
