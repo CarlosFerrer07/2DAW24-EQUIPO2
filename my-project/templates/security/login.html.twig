@@ -13,36 +13,26 @@
             You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
-    <section class="container  align-items-center justify-content-center" style="margin-top: 60px; padding:100px;>
-        <div class="row justify-content-center">
-            <div class="col-sm-4">
-            <div class="mb-3">
-                
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    </div>
-    </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-sm-4">
-    <div class="mb-3">
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-</div>
-</div>
-</div>
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}">
-           <div class="row justify-content-center">
-            <div class="col-sm-4">
-            <div class="mb-3">
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</div>
-</div>
-</div>
+
+<section class="container" style="margin-top: 60px; padding:100px;">
+    <article class="justify-content-center" style="display: inline">
+        <div class="row justify-content-center" style="display: flex;flex-direction: column;align-items: center;">
+            <div class="col-sm-4 mt-3">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <label for="inputEmail">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+            </div>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    
+            <div class="col-sm-4 mt-3">
+                <button class="btn btn-lg btn-primary" type="submit"> Sign in </button>
+            </div>
+        </div>
+        </article>
 </section>
 </form>
 
