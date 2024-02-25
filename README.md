@@ -89,10 +89,18 @@ Its not necessary to Install since the page is published at [emburisproject.com]
 
 But in case you will do modifications, on the Project, and you will use it on a local server, you have to do the next steps:
 
-1. First of all do the docker-compose up so you can activate the containers doing `docker-compose up` so you can deploy de container and you can activate the containers and the local web server deployed from the containers
+1. First of all do the docker-compose up so you can activate the containers doing `docker-compose up` 
 
-2. done,it should be working the whole page, in case you need more news on the page or do some tests with the Back-end profile, remember that there is an admin user that only the client knows.
+2. When you compose the containers, you need to go to the file `.env` and you have to change this line:
+3. `DATABASE_URL="mysql://root:root@172.21.0.2:3306/emburis?serverVersion=mariadb-11.2.2"`  
+  the `root:root, is your USERNAME and your PASSWORD, not recommendable to change in case`
+  the `IP you have to change it to your DB IP, in this case, do a docker inspect (THE ID OF THE DB CONTAINER) and you will have the IP`
+  the `emburis` is the DB name
+4. when you have the url mounted on the .env of the compose, you have to go to the other .env inside the project and copy-paste the same url, firstly before commenting this line:
+`#DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=15&charset=utf8"`, the other you can put it below it(THIS .ENV IS INSIDE OF THE MY-PROJECT).
 
+5. when you have that, i recommend to refresh on the main page and test if the cards appears correctly.
+-in Contrary case, please inspect the logs(F12) and see if jumps any error, in contrary case, try to log to the login and test if it connects, if not, most of the problems comes from the DB URL settings that  are not fully correct.
 
 ## Contributions
 
@@ -107,8 +115,7 @@ In case  you want to do some upgrades on the proyect, try to do the next steps:
 
 ## Known Issues
 
-- The API can last 3-6 seconds to appear,basically meaning that is too slow.
-- 
+- The API can last 3-6 seconds to appear,basically meaning that is too slow,and is totally dependendant of the container/host that holds the database
 
 ## License
 
